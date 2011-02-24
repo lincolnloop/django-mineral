@@ -1,0 +1,257 @@
+{% extends "mineral/base.html" %}
+
+{% load webdesign %}
+
+
+{% block head_title %}Mineral Styles List{% endblock %}
+{% block mineral_forms_active %}active{% endblock %}
+
+{% block content %}
+
+    {# forms #}
+    <form method="post" action="#">
+    <fieldset>
+        <h3 class="legend">Contact Form</h3>
+
+        <div class="group-messages">
+            <div class="group">
+                <h3>How we'll contact you</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla malesuada sollicitudin venenatis. Pellentesque viverra justo non ipsum sagittis eu convallis lectus porta. In congue eleifend metus, sit amet viverra nunc tincidunt vitae.</p>
+            </div>
+            <p class="instructions">Fields marked <span class="req">*</span> are required.</p>
+        </div>
+
+        <div class="row error required">
+            <div class="label">
+                <label for="">Subject</label>
+                <span class="req">* <span>(required)</span></span>
+            </div>
+
+            <input type="text" value="" />
+            <span class="status">&nbsp;</span>
+
+            <ul class="errorlist">
+                <li>This field is required</li>
+            </ul>
+        </div>
+
+        <div class="row error required">
+            <div class="label">
+                <label for="">Autocomplete Example</label>
+                <span class="req">* <span>(required)</span></span>
+                <p class="help-text">Please choose a programming language</p>
+            </div>
+
+            <input type="text" value="" id="autocomplete-language" />
+            <span class="status">&nbsp;</span>
+
+            <ul class="errorlist">
+                <li>This field is required</li>
+            </ul>
+        </div>
+
+
+        <div class="row ui-filter">
+            <div class="label">
+                <label for="">Filter Example</label>
+                <span class="req">* <span>(required)</span></span>
+                <p class="help-text">Please choose a state</p>
+            </div>
+            <div class="filter">
+                <input type="text" value="" />
+            </div>
+            <div class="choices checkbox">
+                <ul>
+                    <li><input type='checkbox' value="Alabama" /> Alabama</li>
+                    <li><input type='checkbox' value="Alaska" /> Alaska</li>
+                    <li><input type='checkbox' value="Arizona" /> Arizona</li>
+                    <li><input type='checkbox' value="Arkansas" /> Arkansas</li>
+                    <li><input type='checkbox' value="California" /> California</li>
+                    <li><input type='checkbox' value="Colorado" /> Colorado</li>
+                    <li><input type='checkbox' value="Connecticut" /> Connecticut</li>
+                    <li><input type='checkbox' value="Delaware" /> Delaware</li>
+                    <li><input type='checkbox' value="Iowa" /> Iowa</li>
+                    <li><input type='checkbox' value="Kansas" /> Kansas</li>
+                    <li><input type='checkbox' value="Alabama" /> Alabama</li>
+                    <li><input type='checkbox' value="Alaska" /> Alaska</li>
+                    <li><input type='checkbox' value="Arizona" /> Arizona</li>
+                    <li><input type='checkbox' value="Arkansas" /> Arkansas</li>
+                    <li><input type='checkbox' value="California" /> California</li>
+                    <li><input type='checkbox' value="Colorado" /> Colorado</li>
+                    <li><input type='checkbox' value="Connecticut" /> Connecticut</li>
+                    <li><input type='checkbox' value="Delaware" /> Delaware</li>
+                    <li><input type='checkbox' value="Iowa" /> Iowa</li>
+                    <li><input type='checkbox' value="Kansas" /> Kansas</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="row multi-input required">
+            <div class="label">
+                <label for="">Autocomplete Facebook Example</label>
+                <span class="req">* <span>(required)</span></span>
+                <p class="help-text">Please choose a programming language</p>
+            </div>
+
+            <input type="text" value="" />
+            <span class="status">&nbsp;</span>
+        </div>
+
+        <div class="row error required">
+            <div class="label">
+                <label for="">Message</label>
+                <span class="req">* <span>(required)</span></span>
+            </div>
+            <p class="help-text">Enter your message</p>
+
+            <textarea rows="3" cols="10"></textarea>
+            <span class="status">&nbsp;</span>
+
+            <ul class="errorlist">
+                <li>This field is required</li>
+            </ul>
+        </div>
+
+
+        <div class="row required">
+            <div class="label">
+                <label for="">Expanding Text Area</label>
+                <span class="req">* <span>(required)</span></span>
+            </div>
+
+            <textarea id="expanding-textarea"></textarea>
+        </div>
+
+
+        <div class="row required">
+            <div class="label">
+                <label for="">Email address</label>
+                <span class="req">* <span>(required)</span></span>
+            </div>
+
+            <input type="text" value="" />
+        </div>
+
+
+        <div class="row date required">
+            <div class="label">
+                <label for="">Date</label>
+                <span class="req">* <span>(required)</span></span>
+            </div>
+
+            <input id="datefield" type="text" value="" />
+            <span id="datepicker" class="datepicker"></span>
+        </div>
+
+
+
+
+        <div class="row date error required">
+            <div class="label">
+                <label for="">Date</label>
+                <span class="req">* <span>(required)</span></span>
+            </div>
+
+            <input id="datefield" type="text" value="" />
+            <span id="datepicker" class="datepicker"></span>
+            <span class="status">&nbsp;</span>
+
+            <ul class="errorlist">
+                <li>This field is required</li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="row date success required">
+            <div class="label">
+                <label for="">Date</label>
+                <span class="req">* <span>(required)</span></span>
+            </div>
+
+            <input id="datefield" type="text" value="" />
+            <span id="datepicker" class="datepicker"></span>
+            <span class="status">&nbsp;</span>
+        </div>
+
+
+
+        <div class="row required">
+            <div class="label">
+                <label for="">File</label>
+                <span class="req">* <span>(required)</span></span>
+            </div>
+
+            <input type="file" class="multi" name="fileupload-1" />
+            <p class="multifile-basic-advanced">
+                You're using the Basic Uploader. You can try the <a href="">Advanced Uploader</a> if you have Flash 9 or greater and there are no ad-blocking plugins installed.
+            </p>
+        </div>
+
+        <input type="submit" value="Submit" class="btn" />
+        <button class="btn btn-cancel">Cancel</button>
+        <button class="btn btn-inactive">Inactive</button>
+
+
+    </fieldset>
+    </form>
+
+
+{% endblock %}
+
+
+{% block extra_js %}
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#datefield").datepicker();
+    $("#datepicker").click(function() {
+        $("#datefield").trigger("focus");
+    });
+
+    $('.proto-image').prototify();
+
+    $('.multi').MultiFile({
+        max: 2,
+        accept: 'gif|jpg|png|bmp|swf'
+    });
+
+    $('.ui-filter .filter input').listfilter().defaultValue({
+        value: 'Search Terms'
+    });
+
+    $('#expanding-textarea').autoResize({
+        // On resize:
+        onResize : function() {
+            $(this).css({opacity:0.8});
+        },
+        // After resize:
+        animateCallback : function() {
+            $(this).css({opacity:1});
+        },
+        // Quite slow animation:
+        animateDuration : 300,
+        // More extra space:
+        extraSpace : 40
+    });
+
+    $(function() {
+		var availableTags = ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby", "python", "c", "scala", "groovy", "haskell", "perl"];
+		$("#autocomplete-language").autocomplete({
+			source: availableTags
+		});
+	});
+
+
+    $(function() {
+		var availableTags = ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby", "python", "c", "scala", "groovy", "haskell", "perl"];
+		$(".multi-input").multicomplete({
+			source: availableTags
+		});
+	});
+
+});
+</script>
+{% endblock %}

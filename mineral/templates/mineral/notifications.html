@@ -1,0 +1,64 @@
+{% extends "mineral/base.html" %}
+
+{% load webdesign %}
+
+
+{% block head_title %}Mineral Styles List{% endblock %}
+{% block mineral_notifications_active %}active{% endblock %}
+
+{% block content %}
+
+    <div class="status-message sticky success">
+        <a class="status-close" href="#">X</a>
+        <h4>This is a success message</h4>
+        <div class="description">
+            This is a description for the success message
+        </div>
+    </div>
+    <div class="status-message sticky error">
+        <a class="status-close" href="#">X</a>
+        <h4>This is an error message</h4>
+        <div class="description">
+            This is a description for the error message
+        </div>
+    </div>
+    <div class="status-message sticky warning">
+        <a class="status-close" href="#">X</a>
+        <h4>This is a warning message without description</h4>
+    </div>
+    <div class="status-message info">
+        <h4>This is a non-sticky info message</h4>
+        <div class="description">
+            This is a description for the info message
+        </div>
+    </div>
+
+
+    <p>
+        <button class="action-buttom" id="add">Add sticky notice</button>
+        <button class="action-buttom" id="add-fading">Add fading notice</button>
+    </p>
+
+{% endblock %}
+
+
+{% block extra_js %}
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $('#add').click(function() {
+        jQuery.noticeAdd({
+            text: 'This is a notification that stays',
+            stay: true
+        });
+    });
+
+    $('#add-fading').click(function() {
+        jQuery.noticeAdd({
+            text: 'This is a notification that does not stay'
+        });
+    });
+
+});
+</script>
+{% endblock %}

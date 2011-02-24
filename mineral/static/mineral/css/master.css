@@ -1,0 +1,176 @@
+/*
+----------------------------------------------------------------------
+
+Base Stylesheet
+
+Author:   Marco Louro
+Version:  2010.03
+
+ ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
++Global
+------------------------------------------------------------ */
+html { background-color: #FFF; text-align: center; }
+
+.clear:after { clear: both; content: '.'; display: block; visibility: hidden; height: 0; }
+.clear { display: inline-block; }
+* html .clear { height: 1%; }
+.clear { display: block; }
+
+a { color: #000; }
+
+pre { padding: 10px; font-size: 12px; border: 1px solid #A7BEC4 }
+
+/* ------------------------------------------------------------
++Common
+------------------------------------------------------------ */
+.hidden { display: none; }
+
+.alrt { text-align: right; }
+.alct { text-align: center; }
+
+.fllt { float: left; }
+.flrt { float: right; }
+
+.clear:after { clear: both; content: '.'; display: block; visibility: hidden; height: 0; }
+.clear { display: inline-block; }
+* html .clear { height: 1%; }
+.clear { display: block; }
+
+.ui-widget { margin-bottom: 20px; }
+
+.btn { padding: 3px 18px 3px; margin-right: 10px; background-color: #5ABAC9;
+        color: #FFF; border: 1px solid #40848F; -moz-border-radius: 3px; font-weight: bold;
+        white-space:nowrap; vertical-align: top; outline: none; -moz-outline-style: none; cursor: pointer;
+        text-decoration: none; }
+.btn:hover { cursor: pointer; color: #22474D; }
+.btn-cancel { background-color: #787878; border-color: #8D8D8D; }
+.btn-cancel:hover { color: #000; }
+.btn-inactive { background-color: #AAA; border-color: #8D8D8D; color: #777; }
+.btn-inactive:hover { color: #777; }
+.btn-small { padding: 1px 5px 2px 6px; margin-right: 3px; }
+
+.proto-image { display: inline-block; border: 1px solid #CCC; background-color: #EFEFEF; }
+.proto-image.fllt { margin: 0 10px 10px 0; }
+.proto-image.flrt { margin: 0 0 10px 10px; }
+.proto-image.flrt { margin: 0 0 10px 10px; }
+
+/* ------------------------------------------------------------
++Structure
+------------------------------------------------------------ */
+#container { margin: 80px 20px 0; text-align: left; }
+
+
+/* ------------------------------------------------------------
++Box
+------------------------------------------------------------ */
+.box { margin-bottom: 20px; border: 1px solid #999; }
+.box h3 { margin: 0; padding: 10px; background-color: #CCC; border-bottom: 1px solid #999; }
+.box .content { width: auto; overflow: hidden; padding: 10px; }
+
+
+
+/* ------------------------------------------------------------
++Tabs
+------------------------------------------------------------ */
+.tabs ul { overflow: hidden; width: 100%; margin: 0; list-style: none; }
+.tabs ul li { float: left; margin: 0; list-style: none; }
+.tabs ul li a { display: inline-block; padding: 10px 15px; margin-right: 6px; list-style: none; background-color: #DDD;
+    text-decoration: none; }
+.tabs li.ui-tabs-selected a { background-color: #999; }
+
+.ui-tabs-hide { display: none; }
+
+.tabs-content { padding: 10px; border: 1px solid #999; }
+
+
+/* ------------------------------------------------------------
++Accordion
+------------------------------------------------------------ */
+.accordion h3 { margin: 0; padding: 10px; background-color: #CCCCCC; border: 1px solid #999; border-bottom-width: 0; }
+.accordion h3.last { border-bottom-width: 1px; }
+.accordion-content { padding: 10px; border: 1px solid #999; border-bottom-width: 0; }
+.accordion-content.last { border-bottom-width: 1px; }
+
+
+
+/* ------------------------------------------------------------
++Datepicker
+------------------------------------------------------------ */
+.ui-datepicker { display: none; width: 200px; padding: 4px; border: 1px solid #AAA; background-color: #FFF; }
+.ui-datepicker-header { position: relative; padding: 8px; background-color: #CCC; color: #222;
+    border: 1px solid #999999; }
+.ui-datepicker-prev,
+.ui-datepicker-next { position: absolute; }
+.ui-datepicker-prev { left: 2px; }
+.ui-datepicker-next { right: 2px; }
+.ui-datepicker-title { font-weight: bold; }
+.ui-datepicker-unselectable { background-color: #FFF; border: none; }
+.ui-datepicker-calendar { width: 100%; margin: 0; }
+.ui-datepicker td,
+.ui-datepicker th { padding: 1px; border: none; }
+.ui-datepicker .ui-state-default { display: block; padding: 3px; background-color: #E6E6E6;
+    font-size: 90%; text-align: right; text-decoration: none;
+    border: 1px solid #D3D3D3; color: #555555; }
+.ui-datepicker .ui-state-default:hover { color: #222; border-color: #999; background-color: #DADADA; }
+.ui-datepicker .ui-state-highlight,
+.ui-datepicker .ui-state-highlight:hover { background-color: #FBF9EE; border-color: #FCEFA1; color: #363636; }
+.ui-datepicker .ui-state-active,
+.ui-datepicker .ui-state-active:hover { background-color: #FFF; color: #555555; border-color: #AAA; }
+
+
+
+/* ------------------------------------------------------------
++Datepicker
+------------------------------------------------------------ */
+.ui-autocomplete { position: absolute; margin: 0 0 0 1px; list-style: none; text-align: left; border: 1px solid #CCC;
+    background-color: #EFEFEF; }
+.ui-autocomplete li { list-style: none; }
+.ui-autocomplete li a { display: block; padding: 8px 10px; }
+.ui-autocomplete .ui-state-hover,
+.ui-autocomplete .ui-state-highlight { background: #FFF; }
+
+/* ------------------------------------------------------------
++File Upload
+------------------------------------------------------------ */
+.multifile-list { padding: 5px 0; }
+.file-row { padding: 4px 0 3px 0; }
+.file-row { color: #444; }
+.multifile-basic-advanced { font-size: 90%; color: #888; }
+.multifile-basic-advanced a { color: #888; }
+
+/* ------------------------------------------------------------
++Multi Input (facebook style)
+------------------------------------------------------------ */
+.multi-input .item-placeholder { display: inline-block; border: 1px solid #CCC; }
+.multi-input input.ui-multicomplete-input { border: none; width: auto; }
+.multi-input .item-list .item { display: inline-block; padding: 5px 4px 5px 8px; margin: 4px;
+    background-color: #E0EAF1; border: 1px solid #7F9FB6; vertical-align: middle; -moz-border-radius: 6px; -webkit-border-radius: 6px; }
+.multi-input .item-list .item a { display: inline-block; margin-left: 6px;  padding: 2px 4px 2px; font-size: 9px; font-weight: bold; color:#fff;
+    background: #7f9fb6; -moz-border-radius: 30px; -webkit-border-radius: 30px; width: 7px; text-align: center; cursor: pointer;}
+
+/* ------------------------------------------------------------
++Filter
+------------------------------------------------------------ */
+.ui-filter { width: 400px; }
+.ui-filter .filter input { width: 386px; }
+.ui-filter ul,
+.ui-filter li { margin: 0; list-style: none; }
+.ui-filter ul { padding: 5px 10px; }
+.ui-filter li { padding: 7px 0; }
+
+.ui-filter .choices { height: 200px; overflow-y: scroll; border: 1px solid #ABABAB; border-top: none;}
+
+
+
+/* ------------------------------------------------------------
++Pagination
+------------------------------------------------------------ */
+.ui-pagination { padding: 5px 0; }
+.ui-pagination-control,
+.ui-pagination-spacer { display: inline-block; margin: 0 0.3em; padding: 0 0.3em; }
+
+.ui-pagination-control { padding: 4px 6px; border: 1px solid #336699; text-decoration: none; }
+.ui-pagination .ui-state-disabled { border-color: #CCC; }
+.ui-pagination-digit.ui-state-disabled { background-color: #336699; color: #FFF; }

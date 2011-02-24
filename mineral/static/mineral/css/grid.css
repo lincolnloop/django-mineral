@@ -1,0 +1,18 @@
+@media screen and (max-width: 319px) {.unit{float: none !important; width: auto !important;}}
+.line:after,.lastUnit:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.line{*zoom:1;}
+.unit{float:left; margin: 0 1.04%; }
+
+.size1of12{width:6.25%;}
+.size2of12{width:14.583%}
+.size3of12{width:22.917%;}
+.size4of12{width:31.25%;}
+.size5of12{width:41.667%;}
+.size6of12{width:47.917%;}
+.size7of12{width:56.25%;}
+.size8of12{width:64.583%;}
+.size9of12{width:72.917%;}
+.size10of12{width:81.25%;}
+.size11of12{width:89.583%;}
+
+.lastUnit{display:table-cell;float:none;width:auto;*display:block;*zoom:1;_position:relative;_left:-3px;_margin-right:-3px;}

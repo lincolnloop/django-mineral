@@ -1,0 +1,27 @@
+.status-message { position: relative; margin: 0 0 25px 0; padding: 2px 0 16px;
+    background: #FFF4BF url(../../images/messages/icon-sprite.png) no-repeat 16px 12px; border: 2px solid #EFD695; }
+
+.status-message .description { font-size: 14px; padding: 0 45px 0 74px; }
+.status-message .status-close { position: absolute; right: 0; top: 0; text-align: center; padding: 2px 6px 4px 8px;
+    text-decoration: none; font-weight: bold; background: #efd695; }
+
+.status-message h4 { font-size: 14px; padding: 14px 45px 8px 74px; font-weight: bold; }
+.status-message.warning { background-position: 16px -125px; }
+.status-message.info { background-position: 16px -293px; }
+.status-message.error { color: #c41230;  background-position: 16px -451px; }
+.status-message.debug { background-position: 16px -631px; }
+.status-message.debug .description { font-family: Monospace !important;
+    font-size: 12px !important; font-weight: normal !important; }
+.status-message.error .extra { font-size: 12px; font-weight: normal; }
+
+.status-message .errorlist { padding: 0 80px; }
+.status-message .errorlist li { list-style: circle; list-style-position: inside; }
+
+
+
+.notice-wrap { position: fixed; z-index: 9999; top: 20px; right: 20px; width: 250px; text-align: left; }
+* html .notice-wrap { position: absolute; }
+.notice-item { position: relative; display: block; height: 60px; padding: 6px 22px 0 6px; margin: 0 0 12px 0;
+    background: #333; color: #eee; border: 2px solid #999;
+    -moz-border-radius: 6px; -webkit-border-radius: 6px; }
+.notice-item-close { position: absolute; top: 6px; right: 6px; cursor: pointer; font-weight: bold; }

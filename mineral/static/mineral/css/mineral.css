@@ -1,0 +1,27 @@
+/*
+----------------------------------------------------------------------
+
+Mineral Stylesheet
+
+Author:   Marco Louro
+Version:  2010.03
+
+ ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
++Header nav
+------------------------------------------------------------ */
+
+#mineral-nav { position: fixed; top: 0; width: 100%; overflow: hidden; z-index: 2;
+    background-color: #37994A; opacity: 0.9; }
+#mineral-nav ul { margin: 0; padding: 0 20px; }
+#mineral-nav ul.first { float: left; }
+#mineral-nav ul.last { float: right; }
+#mineral-nav li { float: left; padding: 10px; font-size: 120%; list-style: none; }
+#mineral-nav span,
+#mineral-nav a { text-shadow: 1px 1px 1px #2B4E23; color: #FFF; text-decoration: none; }
+#mineral-nav a:hover { color: #CBFFC5; }
+#mineral-nav a.active { color: #222; text-shadow: none; }
+#mineral-nav span { text-decoration: line-through; }
+
+#mineral-nav ul.last a { font-weight: normal; font-size: 95% }

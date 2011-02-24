@@ -1,0 +1,238 @@
+{% extends "mineral/base.html" %}
+
+{% load webdesign %}
+
+
+{% block head_title %}Mineral Styles List{% endblock %}
+{% block mineral_widgets_active %}active{% endblock %}
+
+
+{% block content %}
+
+    <div id="tabs" class="tabs">
+        <ul>
+            <li><a href="#tabs-1">Nunc tincidunt</a></li>
+            <li><a href="#tabs-2">Proin dolor</a></li>
+            <li><a href="#tabs-3">Aenean lacinia</a></li>
+        </ul>
+        <div id="tabs-1" class="tabs-content">
+            {% lorem 1 %}
+        </div>
+        <div id="tabs-2" class="tabs-content">
+            {% lorem 2 %}
+        </div>
+        <div id="tabs-3" class="tabs-content">
+            {% lorem 3 %}
+        </div>
+    </div>
+
+
+
+    <div class="box">
+        <h3>This is a box</h3>
+        <div class="content">
+            <canvas class="proto-image fllt" style="width: 200px; height:100px;">200x100px Ad</canvas>
+            {% lorem 3 %}
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>This is a box</h3>
+        <div class="content">
+            <canvas class="proto-image flrt" style="width: 200px; height:300px;">200x300px Ad</canvas>
+            {% lorem 3 %}
+        </div>
+    </div>
+
+
+    <div id="accordion" class="accordion">
+        <h3><a href="#">Section 1</a></h3>
+        <div class="accordion-content">
+            {% lorem 2 %}
+        </div>
+        <h3><a href="#">Section 2</a></h3>
+        <div class="accordion-content">
+            {% lorem 2 %}
+        </div>
+        <h3><a href="#">Section 3</a></h3>
+        <div class="accordion-content">
+            {% lorem 2 %}
+            <ul>
+                <li>List item one</li>
+                <li>List item two</li>
+                <li>List item three</li>
+            </ul>
+        </div>
+        <h3 class="last"><a href="#">Section 4</a></h3>
+        <div class="accordion-content last">
+            {% lorem 2 %}
+        </div>
+    </div>
+
+    <div id="dialog" title="Basic dialog">
+        <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+    </div>
+
+    <div id="progressbar"></div>
+
+
+    <table>
+        <thead>
+        <tr>
+            <th class="first header"><span><a class="sort" title="Sort by Date Start" href="#">Date Start</a></span></th>
+            <th class="header"><span><a title="Sort by Date End" href="#">Date End</a></span></th>
+            <th class="header"><span><a title="Sort by Date Charged" href="#">Date Charged</a></span></th>
+            <th class="header"><span><a title="Sort by Appliance Costs" href="#">Appliance Costs</a></span></th>
+            <th class="header"><span><a title="Sort by Total" href="#">Total</a></span></th>
+            <th class="last header"><span><a class="sort" title="Sort by Statement" href="#">Statement</a></span></th>
+        </tr>
+        </thead>
+        <tbody><tr>
+            <td>April 6, 2010</td>
+            <td>April 6, 2010</td>
+            <td>April 6, 2010</td>
+            <td>$213.00</td>
+            <td>$12321.00</td>
+            <td>
+
+                <a href="/account/subscription/statements/download/2/">See statement</a></td>
+
+
+        </tr><tr>
+            <td>April 2, 2010</td>
+            <td>April 4, 2010</td>
+            <td>April 4, 2010</td>
+            <td>$123.00</td>
+            <td>$1234.00</td>
+            <td>
+
+                <a href="/account/subscription/statements/download/1/">See statement</a></td>
+
+
+        </tr></tbody>
+    </table>
+    <div class="tablesorter-pagination" id="pagination">
+        <span>
+            <a class="previous" title="Previous" href="#">Previous</a>
+            <span class="pagination"><span class="page active">1</span></span>
+            <a class="next" title="Next" href="#">Next</a>
+        </span>
+    </div>
+
+
+    <hr />
+
+    <div class="pagination-container"></div>
+    <div>
+        <h2>Pagination Content</h2>
+        <div id="pagination-content"></div>
+    </div>
+    <div class="pagination-container"></div>
+
+
+
+    <br />
+    <h1>Fancybox</h1>
+    <a href="#pagination" class="modal">Show Pagination in fancybox</a>
+
+
+
+    <br />
+    <h1>jCarouselLite</h1>
+
+    <div class="carousel default">
+
+        <button class="jCar-prev">&lt;&lt;</button>
+
+        <div id="jCarouselLite">
+            <ul>
+                <li><img width="150" height="118" alt="" src="{{ STATIC_URL }}mineral/images/temp/carousel/1.jpg"></li>
+                <li><img width="150" height="118" alt="" src="{{ STATIC_URL }}mineral/images/temp/carousel/2.jpg"></li>
+                <li><img width="150" height="118" alt="" src="{{ STATIC_URL }}mineral/images/temp/carousel/3.jpg"></li>
+                <li><img width="150" height="118" alt="" src="{{ STATIC_URL }}mineral/images/temp/carousel/4.jpg"></li>
+            </ul>
+        </div>
+
+        <button class="jCar-next">&gt;&gt;</button>
+
+    </div>
+
+
+
+{% endblock %}
+
+
+{% block extra_js %}
+<script type="text/javascript">
+$(document).ready(function() {
+
+    var page_options = {
+        pages: 10,
+        text: {
+            first: 'First',
+            last: 'Last',
+            next: 'Next',
+            previous: 'Previous'
+        }
+    }
+
+    $('.pagination-container').pagination('my-group-name', page_options, function(group){
+        $('#pagination-content').html('Pagination Group: ' + group + '.Now on page: ' + this)
+    });
+
+
+
+    $("#tabs").tabs();
+    $("#accordion").accordion();
+
+    //$("#slider").slider();
+    //$("#dialog").dialog();
+    $("#progressbar").progressbar({
+		value: 37
+	});
+
+    $('.proto-image').prototify();
+
+    $(function() {
+		var availableTags = ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby", "python", "c", "scala", "groovy", "haskell", "perl"];
+		$("#autocomplete-language").autocomplete({
+			source: availableTags
+		});
+	});
+
+
+    $(function() {
+		var availableTags = ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby", "python", "c", "scala", "groovy", "haskell", "perl"];
+		$(".multi-input").multicomplete({
+			source: availableTags
+		});
+	});
+
+
+
+
+    $("table").tablesorter()
+        .tablesorterPager({
+            container: $("#pagination"),
+            size: 12,
+            positionFixed: false,
+            cssNext: 'jCar-next',
+            cssPrev: 'jCar-previous',
+            cssPageSize: '.page-size'
+        });
+
+
+
+	$(".modal").fancybox();
+
+
+
+    $("#jCarouselLite").jCarouselLite({
+        btnNext: ".jCar-next",
+        btnPrev: ".jCar-prev"
+    });
+
+
+});
+</script>
+{% endblock %}

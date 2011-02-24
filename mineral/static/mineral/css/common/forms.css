@@ -1,0 +1,82 @@
+
+/* ------------------------------------------------------------
++ Global Defaults
+------------------------------------------------------------ */
+label { font-size: 14px; font-weight: bold; }
+
+input[type=text],
+input[type=password],
+textarea { display: inline-block; width: 320px; padding: 6px; border: 1px solid #ABABAB; vertical-align: middle; }
+input[type=text],
+input[type=password] { background: #FFF url(../images/common/input-bg.png) repeat-x; }
+
+input[type=text],
+input[type=password] { display: inline-block; }
+
+
+/* ------------------------------------------------------------
++ Form
+------------------------------------------------------------ */
+form .row { position: relative; margin-bottom: 20px; }
+
+/* ------------------------------------------------------------
++ Fieldset
+------------------------------------------------------------ */
+fieldset { position: relative; padding: 30px 20px 10px 20px; margin: 10px 0 20px; border: 1px solid #ddd; }
+fieldset .legend { position: absolute; margin-top: -43px; padding: 0 8px; font-size: 20px;
+    background-color: #FFF; color: #000; }
+
+fieldset .group-messages { float: right; margin-right: -20px; margin-left: 20px; width: 246px; }
+fieldset .group-messages h4 { margin: 0 0 8px 0; }
+fieldset .group { margin: 0 0 20px 0; padding: 10px 20px 10px 20px; background:#eee;
+    border: 1px solid #CCC; border-right: none; }
+
+
+/* ------------------------------------------------------------
++ Form Labels
+------------------------------------------------------------ */
+form .label,
+form .help-text { margin: 0 0 4px 0; }
+.instructions { font-size: 14px; }
+.instructions .req,
+form .label .req { display: inline-block; line-height: 12px; font-size: 20px; vertical-align: middle; color: #37994A; }
+form .label .req span { position: absolute; top: -999px; left: -999px; }
+form .status { display:inline-block; height: 25px; width: 18px; text-indent: -999em; margin-top: 2px; vertical-align: top; }
+form .error .status { background: url(../../images/forms/form-icons.png) no-repeat 4px 7px; }
+
+
+/* ------------------------------------------------------------
++ Form Fields
+------------------------------------------------------------ */
+form .date input { width: 80px; }
+form .datepicker { display: inline-block; margin: 0 0 0 7px; width: 24px; height: 24px;
+    vertical-align: middle; background: url(../../images/forms/calendar-month.png) no-repeat; }
+form .datepicker:hover { cursor: pointer; }
+
+/* ------------------------------------------------------------
++ Form Errors
+------------------------------------------------------------ */
+form .error label { color: #C41230; }
+
+form .error input[type=text],
+form .error input[type=password],
+form .error textarea { border-color: #C41230; background-color: #fef4f5; }
+form .error input[type=text],
+form .error input[type=password] { background-image: url(../../images/forms/input-error-bg.png); }
+
+
+
+form .errorlist { margin: 0; padding: 5px 10px; list-style: none; }
+form .errorlist li { list-style: none; }
+
+form .errorlist { padding: 6px 0 6px 0; font-size: 13px; color: #c41230; font-weight: bold; }
+form .errorlist li { padding: 2px 0; font-size: 13px; color: #c41230; font-weight: bold; background: none; }
+
+
+/* ------------------------------------------------------------
++ Form Success
+------------------------------------------------------------ */
+form .success .status { background-position: 4px -25px; }
+form .success input[type=text],
+form .success input[type=password],
+form .success textarea { border-color: green; }

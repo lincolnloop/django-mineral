@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>{% block head_title %}{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}mineral/css/reset.css" media="screen" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}mineral/css/base.css" media="screen" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}mineral/css/fonts.css" media="screen" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}mineral/css/grid.css" media="screen" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}mineral/css/ui-lightness/jquery-ui-1.8.1.custom.css" media="screen" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}mineral/css/common/messages.css" media="screen" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}mineral/css/common/forms.css" media="screen" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}mineral/css/mineral.css" media="screen" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}mineral/css/master.css" media="screen" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}mineral/js/plugins/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+{% block body %}
+
+    <div id="mineral-nav">
+        <ul class="first">
+            <li><a href="{% url mineral:index %}" title="Index" class="{% block mineral_index_active %}{% endblock %}">Index</a></li>
+            <li><a href="{% url mineral:common %}" title="Common"" class="{% block mineral_common_active %}{% endblock %}">Common</a></li>
+            <li><a href="{% url mineral:forms %}" title="Forms"" class="{% block mineral_forms_active %}{% endblock %}">Forms</a></li>
+            <li><a href="{% url mineral:widgets %}" title="Widgets"" class="{% block mineral_widgets_active %}{% endblock %}">Widgets</a></li>
+            <li><a href="{% url mineral:notifications %}" title="notifications"" class="{% block mineral_notifications_active %}{% endblock %}">Notifications</a></li>
+            <li><span>Microformats</span></li>
+        </ul>
+
+        <ul class="last">
+            <li<a href="" title="Style Guide">Documentation</a></li>
+        </ul>
+    </div>
+
+    <div id="container">
+
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div id="footer">
+            {% block footer %}{% endblock %}
+        </div>
+
+    </div>
+{% endblock %}
+
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/libs/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/libs/jquery-ui-1.8.1.custom.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/libs/json2.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.form.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.prototify.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.multifile.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.multicomplete.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.listfilter.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.defaultvalue.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.autoresize.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.tablesorter.pager.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.pagination.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.notice.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.easing-1.3.min.js"></script> <!-- required for fancybox -->
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.mousewheel-3.0.2.min.js"></script> <!-- required for fancybox -->
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.fancybox-1.3.1.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/plugins/jquery.jcarousellite-1.0.1.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}mineral/js/global.js"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
