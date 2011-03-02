@@ -1,0 +1,17 @@
+/*
+----------------------------------------------------------------------
+
+Base Stylesheet
+
+Author:   Marco Louro
+Version:  2010.03
+
+ ------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
++Proto-image
+------------------------------------------------------------ */
+.proto-image { display: inline-block; border: 1px solid #CCC; background-color: #EFEFEF; }
+.proto-image.fllt { margin: 0 10px 10px 0; }
+.proto-image.flrt { margin: 0 0 10px 10px; }
+.proto-image.flrt { margin: 0 0 10px 10px; }
