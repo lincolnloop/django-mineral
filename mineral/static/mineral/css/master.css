@@ -54,7 +54,9 @@ pre { padding: 10px; font-size: 12px; border: 1px solid #A7BEC4 }
 .proto-image { display: inline-block; border: 1px solid #CCC; background-color: #EFEFEF; }
 .proto-image.fllt { margin: 0 10px 10px 0; }
 .proto-image.flrt { margin: 0 0 10px 10px; }
-.proto-image.flrt { margin: 0 0 10px 10px; }
+
+.placeholder.fllt { margin: 0 10px 10px 0; }
+.placeholder.flrt { margin: 0 0 10px 10px; }
 
 /* ------------------------------------------------------------
 +Structure
