@@ -29,6 +29,9 @@ setup(
     packages=[
         'mineral',
     ],
+    install_requires=[
+        'django-ttag>=1.0-alpha-3',
+    ],
     package_data={'mineral': MINERAL_DATA},
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
