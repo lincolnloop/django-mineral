@@ -4,8 +4,11 @@ try:
     from cStringIO import StringIO
 except ImportError:
     from StringIO import StringIO
-
-from PIL import ImageFont, ImageDraw, Image
+# Try to import PIL in either of the two ways it can end up installed.
+try:
+    from PIL import ImageFont, ImageDraw, Image
+except ImportError:
+    import ImageFont, ImageDraw, Image
 from django import template
 import ttag
 
