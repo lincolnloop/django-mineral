@@ -19,8 +19,8 @@ register = template.Library()
 
 def create_placeholder(size, text=None, background='#f2f2f2', border='#ddd',
                        text_color='#999', text_size=12, antialias=True):
+    original_size = size
     if antialias:
-        original_size = size
         size = [value * 3 for value in size]
         text_size *= 3
     right_x, right_y = size[0] - 1, size[1] - 1
@@ -40,6 +40,17 @@ def create_placeholder(size, text=None, background='#f2f2f2', border='#ddd',
         draw.text(((img.size[0] - text_size[0]) // 2,
                    (img.size[1] - text_size[1]) // 2),
                   text, fill=text_color, font=font)
+    size_text = '%sx%s' % tuple(original_size)
+    font = ImageFont.truetype(
+        os.path.join(os.path.dirname(__file__),'FreeSans.ttf'),
+        9 * (antialias and 3 or 1)
+    )
+    size_text_size = draw.textsize(size_text, font=font)
+    size_text_y = img.size[1] - size_text_size[1]
+    if not text or (img.size[1] + text_size[1]) // 2 < size_text_y:
+        draw.text(((img.size[0] - size_text_size[0]) // 2,
+                   size_text_y),
+                  size_text, fill=text_color, font=font)
     if antialias:
         img = img.resize(original_size, Image.ANTIALIAS)
     return img
