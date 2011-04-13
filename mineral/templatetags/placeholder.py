@@ -100,8 +100,8 @@ class Placeholder(ttag.Tag):
     ``no_antialias``
         Don't antialias the final image.
     """
-    size = SizeArg(positional=True)
-    text = ttag.Arg(positional=True, required=False)
+    size = SizeArg()
+    text = ttag.Arg(required=False)
     background = ttag.Arg(keyword=True, required=False)
     border = ttag.Arg(keyword=True, required=False)
     text_color = ttag.Arg(keyword=True, required=False)
